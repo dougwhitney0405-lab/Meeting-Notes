@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Meeting Notes Updater</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 30px auto; }
+    .card { padding: 18px; border: 1px solid #ddd; border-radius: 10px; }
+    label { display:block; margin-top: 12px; font-weight: 600; }
+    input { margin-top: 6px; }
+    button { margin-top: 16px; padding: 10px 14px; cursor:pointer; }
+    small { color:#555; }
+  </style>
+</head>
+<body>
+  <h1>Meeting Notes Updater</h1>
+  <div class="card">
+    <form action="/process" method="post" enctype="multipart/form-data">
+      <label>Upload Word document (.docx)</label>
+      <input type="file" name="docx" accept=".docx" required />
+
+      <label>Upload handwritten notes photo(s)</label>
+      <input type="file" name="images" accept="image/*" multiple required />
+      <small>You can upload multiple pages.</small>
+
+      <button type="submit">Update Document</button>
+    </form>
+  </div>
+</body>
+</html>
